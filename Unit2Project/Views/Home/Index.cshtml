@@ -1,5 +1,41 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<Comic>
 @{
+    ViewBag.Title = "Comics Database";
 }
+
+<!DOCTYPE html>
+<html>
+ <head>
+     
+ </head>
+ <body>
+    <h2>Welcome Please Enter Your Comics</h2>
+
+    <a asp-controller="Comic" asp-action="Add">Add Comics</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Issue Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var comic in Model)
+            {
+                <tr>
+                    <td>@comic.Name</td>
+                    <td>@comic.Company</td>
+                    <td>@comic.IssueNo</td>
+                    <td>
+                        <a asp-controller="Comic" asp-action="Edit"
+                            asp-route-id="@comic.ComicId">Edit</a>
+                            <a asp-controller="Comic" asp-action="Delete"
+                            asp-route-id="@comic.ComicId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

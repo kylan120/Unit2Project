@@ -13,7 +13,8 @@ namespace Unit2Project.Controllers
         } 
         public IActionResult Index()
         {
-            return View();
+            var comics = context.Comics.ToList();
+            return View(comics);
         }
     }
 }
