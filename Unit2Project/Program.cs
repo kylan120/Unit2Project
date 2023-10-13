@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using Unit2Project.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<ComicContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ComicContext")));
+
+
 
 var app = builder.Build();
 
