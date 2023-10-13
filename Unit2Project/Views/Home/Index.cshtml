@@ -3,21 +3,25 @@
     ViewBag.Title = "Comics Database";
 }
 
+<!--
+    This is the Home site to view your comics
+-->
+
 <!DOCTYPE html>
 <html>
  <head>
-     
+     <title>Home</title>
  </head>
  <body>
     <h2>Welcome Please Enter Your Comics</h2>
 
-    <a asp-controller="Comic" asp-action="Add">Add Comics</a>
-    <table class="table table-bordered">
+   
+    <table class="maintable">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Company</th>
-                <th>Issue Number</th>
+                <th class="Name">Name</th>
+                <th class="Company">Company</th>
+                <th class="Issue">Issue Number</th>
             </tr>
         </thead>
         <tbody>
@@ -37,5 +41,6 @@
             }
         </tbody>
     </table>
+        <a asp-controller="Comic" asp-action="Add">Add Comics</a>
 </body>
 </html>

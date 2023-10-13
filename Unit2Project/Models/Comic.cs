@@ -14,6 +14,8 @@ namespace Unit2Project.Models
 
         [Required(ErrorMessage = "Please enter an issue number.")]
         public int? IssueNo { get; set; }
+
+       
         
     }
 }
