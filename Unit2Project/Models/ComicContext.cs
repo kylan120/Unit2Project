@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
+
+// This is the Comic Context class that stores it in like a database
 namespace Unit2Project.Models
 {
     public class ComicContext : DbContext

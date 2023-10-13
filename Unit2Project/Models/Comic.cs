@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+
+// This is the Comic class that helps creates the Comics
 namespace Unit2Project.Models
 {
     

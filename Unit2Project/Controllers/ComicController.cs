@@ -2,6 +2,9 @@
 using System.Diagnostics.Eventing.Reader;
 using Unit2Project.Models;
 
+// This is the Comic Controller that controlls the edit add and delete Views. 
+// It also gets the data from the ComicContext class 
+
 namespace Unit2Project.Controllers
 {
     public class ComicController : Controller

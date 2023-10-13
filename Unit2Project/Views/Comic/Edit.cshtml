@@ -3,11 +3,13 @@
     string title = ViewBag.Action + " Comic";
     ViewBag.Title = title;
 }
+
+<!--
+    This is the Edit Page, you can edit your comics here
+-->
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Edit</title>
-    </head>
+    
  <body>
      <h2>@ViewBag.Title</h2>
 
@@ -18,12 +20,12 @@
              <label asp-for="Name">Name</label>
              <input asp-for="Name" class="form-control" />
          </div>
-
-         <div class="form-group">
+         <br />
+        <div class="form-group">
              <lable asp-for="Company">Company</lable>
              <input asp-for="Company" class="form-control" />
          </div>
-
+         <br />
          <div class="form-group">
              <label asp-for="IssueNo">Issue Number</label>
              <input asp-for="IssueNo" class="form-control" />
@@ -33,7 +35,7 @@
 
          <button type="submit" class="btn btn-primary">@ViewBag.Action</button>
          <a asp-controller="Home" asp-action="Index"
-                class="btn btn-primary">Stop</a>
+                class="btn btn-primary">Go Back</a>
      </form>
  </body>
 </html>
